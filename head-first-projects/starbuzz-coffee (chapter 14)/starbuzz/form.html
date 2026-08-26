@@ -1,16 +1,165 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>The Starbuzz Bean Machine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="starbuzz.css" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Starbuzz Bean Machine</title>
   </head>
   <body>
-
     <h1>The Starbuzz Bean Machine</h1>
-    <h2>Fill out the form below and click submit to order</h2>
+    <h2>Fill out the form below and click "order now" to order</h2>
 
+    <form action="index.html" method="post">
+      <fieldset>
+        <legend>Bean factory</legend>
 
+        <div class="tablerow">
+          <label for="beans">Choose your beans:</label>
+          <p>
+            <select name="beans" id="beans">
+              <option value="House Blend">House Blend</option>
+              <option value="Bolivia">Shade Grown Bolivia Supremo</option>
+              <option value="Guatemala">Organic Guatemala</option>
+              <option value="Kenya">Kenya</option>
+            </select>
+          </p>
+        </div>
 
+        <div class="tablerow">
+          <label for="whole">Type:</label>
+          <p>
+            <input type="radio" name="beantype" value="whole" id="whole" />
+            <label for="whole">Whole bean</label>
+            <br />
+            <input
+              type="radio"
+              name="beantype"
+              value="ground"
+              id="ground"
+              checked
+            />
+            <label for="ground">Ground</label>
+          </p>
+        </div>
+
+        <div class="tablerow">
+          <label for="bags">Number of bags:</label>
+          <p>
+            <input type="number" id="bags" name="bags" min="1" max="10" />
+          </p>
+        </div>
+
+        <div class="tablerow">
+          <label for="date">Must arrive by date:</label>
+          <p>
+            <input type="date" name="date" id="date" />
+          </p>
+        </div>
+
+        <div class="tablerow">
+          <label for="extras1">Extras:</label>
+          <p>
+            <input
+              type="checkbox"
+              name="extras[]"
+              id="extras1"
+              value="giftwrap"
+            />
+            <label for="extras1">Gift Wrap</label>
+            <br />
+            <input
+              type="checkbox"
+              name="extras[]"
+              id="extras2"
+              value="catalog"
+              checked
+            />
+            <label for="extras2">Include catalog with order</label>
+          </p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ship to:</legend>
+
+        <div class="tablerow">
+          <label for="name">Name:</label>
+          <p>
+            <input type="text" name="name" id="name" placeholder="John Doe" />
+          </p>
+        </div>
+        <div class="tablerow">
+          <label for="address">Address:</label>
+          <p>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Street, 123"
+            />
+          </p>
+        </div>
+        <div class="tablerow">
+          <label for="city">City:</label>
+          <p>
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="New York City"
+            />
+          </p>
+        </div>
+        <div class="tablerow">
+          <label for="state">State:</label>
+          <p>
+            <input
+              type="text"
+              name="state"
+              id="state"
+              placeholder="California"
+            />
+          </p>
+        </div>
+        <div class="tablerow">
+          <label for="zip">Zip:</label>
+          <p>
+            <input type="text" name="zip" id="zip" placeholder="123-456-789" />
+          </p>
+        </div>
+        <div class="tablerow">
+          <label for="phone">Phone:</label>
+          <p>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="12-3456-7890"
+            />
+          </p>
+        </div>
+
+        <div class="tablerow">
+          <label for="comments">Customer Comments:</label>
+          <p>
+            <textarea
+              name="comments"
+              cols="48"
+              rows="10"
+              id="comments"
+            ></textarea>
+          </p>
+        </div>
+
+        <div class="tablerow">
+          <p></p>
+          <p>
+            <input type="submit" value="Order Now" id="submit" />
+          </p>
+        </div>
+      </fieldset>
+    </form>
   </body>
 </html>
-

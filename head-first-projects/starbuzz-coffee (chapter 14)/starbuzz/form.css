@@ -1,0 +1,65 @@
+body {
+  background: #efe5d0 url(images/background.gif);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+form {
+  display: table;
+  padding: 10px;
+  border: thin solid #7e7e7e;
+  background-color: #e1ceb8;
+
+  width: 696.1px;
+  margin: 0 auto;
+}
+
+fieldset {
+  background-color: #cebca9;
+  border: thick solid #baaa98;
+}
+
+form textarea {
+  width: 500px;
+  height: 200px;
+}
+
+div.tablerow {
+  display: table-row;
+}
+
+input,
+textarea,
+select {
+  border-radius: 0.5em;
+  border: 2px solid black;
+}
+
+label {
+  display: table-cell;
+  text-align: right;
+  padding-right: 5px;
+}
+
+p label {
+  display: inline;
+}
+
+legend {
+  font-size: medium;
+  font-weight: bold;
+  padding: 5px;
+}
+
+div.tablerow p {
+  display: table-cell;
+  vertical-align: top;
+  padding: 3px;
+}
+
+#submit:hover {
+  background-color: lightgray;
+}
